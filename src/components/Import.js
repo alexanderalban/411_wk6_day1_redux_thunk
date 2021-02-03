@@ -56,7 +56,7 @@ const Import = (props) => {
                                     onClose={handleClose}
                                 >
                                     <MenuItem onClick={handleDeletes}>DELETE</MenuItem>
-                                    <MenuItem onClike={handleClose}>Close</MenuItem>
+                                    <MenuItem onClick={handleClose}>Close</MenuItem>
                                 </Menu>
                             </TableCell>
                         </TableRow>

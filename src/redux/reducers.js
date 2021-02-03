@@ -18,8 +18,10 @@ const cars = (state = [], action) => {
 const makes = (state = [], action) => {
     switch(action.type) {
         case 'FETCH_MAKES':
+            console.log(action.value)
             return action.value
         case 'DELETE_MAKE':
+            console.log(action.value)
             const cars = [ ...state ]
             cars.splice(action.value, 1)
             return cars

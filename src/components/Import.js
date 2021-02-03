@@ -19,7 +19,7 @@ const Import = (props) => {
         setAnchorEl(null);
       };
     
-    const [deletedMake, setDeletedMake] = useState(null);
+    const [deletedMake] = useState(null);
 
     const handleDeletes = (index) => {
         props.deleteMake(deletedMake, index)
@@ -42,8 +42,8 @@ const Import = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.makes.map((makes) => (
-                        <TableRow>
+                    {props.makes.map((makes, index) => (
+                        <TableRow key={index}>
                             <TableCell>{makes.MakeId}</TableCell>
                             <TableCell>{makes.MakeName}</TableCell>
                             <TableCell>
